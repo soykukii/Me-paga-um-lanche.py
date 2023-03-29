@@ -1,7 +1,7 @@
-import tkinter as Lanche
+import tkinter as tk
 import random
 
-root = Lanche.Tk()
+root = tk.Tk()
 root.geometry('200x200')
 
 def hover(event):
@@ -10,17 +10,20 @@ def hover(event):
     nao.place(x=x, y=y)
 
     def msg():
-        message = Lanche.Label(root, text = 'Obrigado!')
+        message = tk.Label(root, text = 'Obrigado!')
         message.place(x=70, y=120, relx=0, rely=0)
 
-a = Lanche.Label(root, text='Me paga um lanche?')
+a = tk.Label(root, text='Me paga um lanche?')
 a.pack(anchor='n', pady=20)
 
-nao = Lanche.Button(root, text='Não')
+nao = tk.Button(root, text='Não')
 nao.place(x=140, y=80)
 nao.bind('<Enter>', hover)
 
-sim = Lanche.Button(root, text='Sim', command='msg')
+sim = tk.Button(root, text='Sim', command='msg')
 sim.place(x=25, y=80, relx=0, rely=0)
 
 root.mainloop()
+
+# Código muito legal e funcional feito por mim...
+# Não precisa baixar a biblioteca 'tkinter' e nem a 'random', elas já são nativas do Python!
